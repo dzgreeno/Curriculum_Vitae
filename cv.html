@@ -39,10 +39,16 @@
     .cv-container {
       max-width: 1040px;
       margin: 24px auto;
+    }
+
+    .cv-page {
       background: var(--white);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
       border-radius: 12px;
       overflow: hidden;
+      margin-bottom: 28px;
+      position: relative;
+      box-sizing: border-box;
     }
 
     /* Actions bar on top for user */
@@ -102,63 +108,91 @@
     .cv-header {
       background: linear-gradient(135deg, #093925 0%, #115e3c 60%, #166e4a 100%);
       color: var(--white);
-      padding: 36px 40px;
+      padding: 26px 36px;
       display: grid;
       grid-template-columns: 1fr auto;
-      gap: 30px;
+      gap: 24px;
       align-items: center;
       position: relative;
     }
 
+    /* PAGE 2 MINI HEADER */
+    .page2-header {
+      background: linear-gradient(135deg, #093925 0%, #115e3c 60%, #166e4a 100%);
+      color: var(--white);
+      padding: 12px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #10b981;
+    }
+
+    .page2-header .p2-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.3px;
+    }
+
+    .page2-header .p2-sub {
+      font-size: 11.5px;
+      color: #a7f3d0;
+      font-weight: 500;
+    }
+
     .header-text h1 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 32px;
+      font-size: 28px;
       font-weight: 700;
       letter-spacing: -0.5px;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
       color: #ffffff;
     }
 
     .header-text .target-title {
-      font-size: 17px;
+      font-size: 14px;
       font-weight: 600;
       color: #93ebd0;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
       display: inline-flex;
       align-items: center;
       gap: 8px;
       background: rgba(255, 255, 255, 0.1);
-      padding: 4px 14px;
+      padding: 3px 12px;
       border-radius: 30px;
       border: 1px solid rgba(255, 255, 255, 0.15);
     }
 
     .header-bio {
-      font-size: 13.5px;
-      line-height: 1.6;
+      font-size: 12px;
+      line-height: 1.5;
       color: #e2e8f0;
       max-width: 650px;
-      margin-bottom: 18px;
+      margin-bottom: 12px;
     }
 
     .contact-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px 24px;
-      font-size: 13px;
+      gap: 8px 18px;
+      font-size: 12px;
     }
 
     .contact-item {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
       color: #f1f5f9;
       text-decoration: none;
     }
 
     .contact-item i {
       color: #6ee7b7;
-      font-size: 14px;
+      font-size: 13px;
     }
 
     .contact-item:hover {
@@ -169,87 +203,91 @@
     /* QR Code Card */
     .qr-card {
       background: #ffffff;
-      padding: 12px;
-      border-radius: 12px;
+      padding: 10px;
+      border-radius: 10px;
       text-align: center;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-width: 155px;
+      min-width: 130px;
     }
 
     .qr-card img {
-      width: 120px;
-      height: 120px;
-      border-radius: 6px;
+      width: 95px;
+      height: 95px;
+      border-radius: 4px;
       display: block;
     }
 
     .qr-card span {
       display: block;
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 700;
       color: var(--primary);
-      margin-top: 8px;
+      margin-top: 6px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
 
     .qr-card small {
-      font-size: 9.5px;
+      font-size: 9px;
       color: var(--muted);
     }
 
     /* MAIN CONTENT */
     .cv-body {
       display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 32px;
-      padding: 36px 40px;
+      grid-template-columns: 1.85fr 1fr;
+      gap: 26px;
+      padding: 20px 34px 16px 34px;
+    }
+
+    .p2-body {
+      padding: 22px 34px 18px 34px;
     }
 
     .section-title {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 17px;
+      font-size: 15px;
       font-weight: 700;
       color: var(--primary);
       text-transform: uppercase;
       letter-spacing: 0.8px;
-      margin-bottom: 16px;
-      padding-bottom: 6px;
+      margin-bottom: 12px;
+      padding-bottom: 4px;
       border-bottom: 2px solid var(--primary-subtle);
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 9px;
     }
 
     .section-title i {
       color: var(--primary-light);
-      font-size: 16px;
+      font-size: 15px;
     }
 
     /* TIMELINE & EXPERIENCE */
     .timeline {
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      margin-bottom: 28px;
+      gap: 12px;
+      margin-bottom: 0;
     }
 
     .timeline-item {
       position: relative;
-      padding-left: 20px;
+      padding-left: 16px;
       border-left: 2px solid #cbd5e1;
     }
 
     .timeline-item::before {
       content: '';
       position: absolute;
-      left: -6px;
+      left: -5px;
       top: 4px;
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       background: var(--primary-light);
       border: 2px solid #ffffff;
@@ -260,60 +298,60 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
 
     .role-title {
-      font-size: 15px;
+      font-size: 13.5px;
       font-weight: 700;
       color: var(--dark);
     }
 
     .company-badge {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 600;
       color: var(--primary-light);
     }
 
     .period {
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 600;
       color: var(--muted);
       background: #f1f5f9;
-      padding: 2px 8px;
+      padding: 1px 6px;
       border-radius: 4px;
     }
 
     .timeline-desc {
-      font-size: 13px;
+      font-size: 12px;
       color: #475569;
-      margin-top: 6px;
+      margin-top: 3px;
     }
 
     .timeline-desc ul {
       list-style-type: disc;
-      padding-left: 18px;
-      margin-top: 4px;
+      padding-left: 16px;
+      margin-top: 2px;
     }
 
     .timeline-desc li {
-      margin-bottom: 4px;
-      line-height: 1.45;
+      margin-bottom: 2px;
+      line-height: 1.4;
     }
 
     /* PROJECT CARDS */
     .project-grid {
       display: flex;
       flex-direction: column;
-      gap: 14px;
-      margin-bottom: 28px;
+      gap: 11px;
+      margin-bottom: 0;
     }
 
     .project-card {
       background: var(--light-bg);
       border: 1px solid var(--card-border);
       border-radius: 8px;
-      padding: 14px 16px;
+      padding: 11px 14px;
       transition: all 0.2s ease;
     }
 
@@ -349,23 +387,23 @@
     }
 
     .project-card-desc {
-      font-size: 12.5px;
+      font-size: 11.5px;
       color: #475569;
-      line-height: 1.45;
-      margin-bottom: 8px;
+      line-height: 1.42;
+      margin-bottom: 5px;
     }
 
     .tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 5px;
     }
 
     .tag {
-      font-size: 11px;
+      font-size: 10.5px;
       background: #e2e8f0;
       color: #334155;
-      padding: 2px 8px;
+      padding: 1px 7px;
       border-radius: 4px;
       font-weight: 500;
     }
@@ -374,37 +412,37 @@
     .sidebar {
       display: flex;
       flex-direction: column;
-      gap: 26px;
+      gap: 16px;
     }
 
     .skill-block {
       background: #ffffff;
       border: 1px solid var(--card-border);
       border-radius: 8px;
-      padding: 16px;
+      padding: 12px;
     }
 
     .skill-block-title {
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 700;
       color: var(--dark);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
     }
 
     .skill-pill-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 5px;
     }
 
     .skill-pill {
-      font-size: 12px;
+      font-size: 11px;
       background: var(--primary-subtle);
       color: var(--primary);
-      padding: 4px 10px;
+      padding: 3px 8px;
       border-radius: 20px;
       font-weight: 600;
       border: 1px solid #d1fae5;
@@ -423,7 +461,7 @@
     }
 
     .education-item {
-      margin-bottom: 14px;
+      margin-bottom: 10px;
     }
 
     .education-item:last-child {
@@ -431,25 +469,25 @@
     }
 
     .edu-degree {
-      font-size: 13.5px;
+      font-size: 12.5px;
       font-weight: 700;
       color: var(--dark);
     }
 
     .edu-school {
-      font-size: 12.5px;
+      font-size: 11.5px;
       font-weight: 600;
       color: var(--primary-light);
     }
 
     .edu-year {
-      font-size: 11.5px;
+      font-size: 11px;
       color: var(--muted);
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
 
     .edu-honors {
-      font-size: 12px;
+      font-size: 11.5px;
       color: var(--accent);
       font-weight: 600;
     }
@@ -458,47 +496,75 @@
       background: linear-gradient(145deg, #f8fafc, #edf2f7);
       border: 1px solid #cbd5e1;
       border-radius: 8px;
-      padding: 14px;
+      padding: 10px 12px;
     }
 
     .audiovisual-box h4 {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       color: var(--dark);
-      margin-bottom: 6px;
+      margin-bottom: 4px;
       display: flex;
       align-items: center;
       gap: 6px;
     }
 
     .audiovisual-box p {
-      font-size: 12px;
+      font-size: 11px;
       color: #475569;
-      line-height: 1.45;
+      line-height: 1.4;
     }
 
     /* PRINT STYLES FOR PDF */
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
     @media print {
-      body {
-        background: transparent;
+      html, body {
+        background: transparent !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
       }
       .action-bar {
-        display: none;
+        display: none !important;
       }
       .cv-container {
-        box-shadow: none;
-        margin: 0;
-        border-radius: 0;
-        width: 100%;
-        max-width: 100%;
+        box-shadow: none !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        background: transparent !important;
       }
-      .cv-header {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+      .cv-page {
+        width: 210mm !important;
+        height: 297mm !important;
+        min-height: 297mm !important;
+        max-height: 297mm !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        page-break-after: always !important;
+        break-after: page !important;
+        background: #ffffff !important;
       }
-      .tag, .skill-pill, .badge-rank {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+      .cv-page:last-child {
+        page-break-after: auto !important;
+        break-after: auto !important;
+      }
+      .cv-header, .page2-header, .tag, .skill-pill, .badge-rank, .audiovisual-box, .project-card, .company-badge, .period {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
       }
     }
   </style>
@@ -525,344 +591,372 @@
 
   <div class="cv-container">
 
-    <!-- HEADER SECTION -->
-    <header class="cv-header">
-      <div class="header-text">
-        <h1>LAKHDAR TAIBAOUI</h1>
-        <div class="target-title">
-          <i class="fa-solid fa-truck-ramp-box"></i>
-          <span>Coordinateur Logistique & Supply Chain | Gestion des Flux Agro-Industriels & Systèmes Numériques</span>
-        </div>
-        <p class="header-bio">
-          Ingénieur d'État en Génie Industriel et Logistique (ESSA Tlemcen), alliant expertise opérationnelle en gestion des entrepôts (WMS/ERP), modélisation des flux de transport et optimisation par l'Intelligence Artificielle. Rigoureux et orienté terrain, capable de coordonner les flux d'approvisionnement en matières premières, la chaîne de froid et le déploiement d'outils numériques pour sécuriser les cadences industrielles.
-        </p>
-        <div class="contact-grid">
-          <span class="contact-item">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Djelfa, Algérie (Mobilité totale : Adrar / Sud)</span>
-          </span>
-          <a href="tel:+213656197938" class="contact-item">
-            <i class="fa-solid fa-phone"></i>
-            <span>+213 656 19 79 38</span>
-          </a>
-          <a href="mailto:lakhdarhitbi17@gmail.com" class="contact-item">
-            <i class="fa-solid fa-envelope"></i>
-            <span>lakhdarhitbi17@gmail.com</span>
-          </a>
-          <a href="https://github.com/dzgreeno" target="_blank" class="contact-item">
-            <i class="fa-brands fa-github"></i>
-            <span>github.com/dzgreeno</span>
-          </a>
-          <a href="https://www.kaggle.com/greenalgeria" target="_blank" class="contact-item">
-            <i class="fa-brands fa-kaggle"></i>
-            <span>kaggle.com/greenalgeria</span>
-          </a>
-        </div>
-      </div>
+    <!-- ================= PAGE 1 ================= -->
+    <div class="cv-page cv-page-1">
 
-      <!-- QR Code Section -->
-      <div class="qr-card">
-        <img src="qrcode.png" alt="QR Code Portfolio Lakhdar Taibaoui">
-        <span>Portfolio Digital</span>
-        <small>Scanner pour voir les projets & vidéos</small>
-      </div>
-    </header>
-
-    <!-- BODY SECTION -->
-    <div class="cv-body">
-
-      <!-- LEFT COLUMN: EXPERIENCES & PROJECTS -->
-      <main class="main-column">
-
-        <!-- PARCOURS PROFESSIONNEL -->
-        <section>
-          <h2 class="section-title">
-            <i class="fa-solid fa-briefcase"></i>
-            <span>Expériences Professionnelles & Stages Opérationnels</span>
-          </h2>
-
-          <div class="timeline">
-
-            <!-- Expérience 1: Freelance Développement & IA Générative (2023 - Présent) -->
-            <div class="timeline-item">
-              <div class="timeline-header">
-                <span class="role-title">Freelance – Solutions Logicielles & Audiovisuel IA Générative</span>
-                <span class="period">2023 - Présent</span>
-              </div>
-              <div class="company-badge">Indépendant | Projets Numériques, Web/Mobile & Création Vidéo IA</div>
-              <div class="timeline-desc">
-                <ul>
-                  <li>Développement d'applications Web et mobiles de production (Firebase, Node.js, Electron, React Native).</li>
-                  <li>Création de contenus audiovisuels avancés : animation, montage et vidéo par <strong>IA Générative</strong> (modèles visuels, storytelling dynamique et post-production numérique).</li>
-                  <li>Développement continu du <strong>Jumeau Numérique (Digital Twin Agro-Logistique)</strong> pour la simulation des flux agricoles et d'élevage.</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Expérience 2: Responsable Gestion Stock (Magic Mall) -->
-            <div class="timeline-item">
-              <div class="timeline-header">
-                <span class="role-title">Superviseur d'Approvisionnement & Gestionnaire de Stocks</span>
-                <span class="period">2022</span>
-              </div>
-              <div class="company-badge">Magic Mall, Djelfa</div>
-              <div class="timeline-desc">
-                <ul>
-                  <li>Gestion physique et informatique de plus de 4 500 références sous logiciel ERP dédié.</li>
-                  <li>Organisation des zones de stockage, optimisation du picking et réduction des ruptures de stock de <strong>25%</strong>.</li>
-                  <li>Encadrement d'une équipe de magasiniers et contrôle de conformité à réception.</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Expérience 3: Stage Calbin -->
-            <div class="timeline-item">
-              <div class="timeline-header">
-                <span class="role-title">Stagiaire – Gestion des Stocks & Chaîne Logistique</span>
-                <span class="period">2021 - 2022</span>
-              </div>
-              <div class="company-badge">Calbin, Alger</div>
-              <div class="timeline-desc">
-                <ul>
-                  <li>Analyse des rotations de stock (méthodes ABC/Pareto) et optimisation du réapprovisionnement.</li>
-                  <li>Audit des flux internes de manutention et formalisation des fiches de procédures standardisées.</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Expérience 4: Stage Laiterie Maghnia (2019) -->
-            <div class="timeline-item">
-              <div class="timeline-header">
-                <span class="role-title">Stage Pratique – Lignes de Production & Flux Laitiers (Lait, Fromage & Yaourt)</span>
-                <span class="period">2019</span>
-              </div>
-              <div class="company-badge">Laiterie Maghnia (Tlemcen) – Complexe Produits Laitiers & Dérivés</div>
-              <div class="timeline-desc">
-                <ul>
-                  <li>Immersion opérationnelle sur les chaînes de fabrication : lait pasteurisé, yaourts et fromages.</li>
-                  <li>Suivi des réceptions de lait cru, vérification des paramètres physico-chimiques et respect de la chaîne de froid.</li>
-                  <li>Gestion des flux d'emballage, des stocks tampons de matières premières et ordonnancement des déchargements en citernes.</li>
-                </ul>
-              </div>
-            </div>
-
+      <!-- HEADER SECTION -->
+      <header class="cv-header">
+        <div class="header-text">
+          <h1>LAKHDAR TAIBAOUI</h1>
+          <div class="target-title">
+            <i class="fa-solid fa-truck-ramp-box"></i>
+            <span>Coordinateur Logistique & Supply Chain | Gestion des Flux Agro-Industriels & Systèmes Numériques</span>
           </div>
-        </section>
-
-        <!-- PROJETS PHARES & INNOVATIONS IA -->
-        <section>
-          <h2 class="section-title">
-            <i class="fa-solid fa-microchip"></i>
-            <span>Projets Majeurs, Compétitions & IA Appliquée</span>
-          </h2>
-
-          <div class="project-grid">
-
-            <!-- Dairy Supply-Chain Digital Twin (Flagship Project) -->
-            <div class="project-card">
-              <div class="project-card-header">
-                <div class="project-card-title">
-                  <i class="fa-solid fa-cow" style="color: #059669;"></i>
-                  <span>Dairy Supply-Chain Digital Twin (SimPy &amp; Biophysique)</span>
-                </div>
-                <div style="display:flex; gap:6px; align-items:center;">
-                  <a href="https://www.kaggle.com/code/greenalgeria/dairy-supply-chain-digital-twin-final" target="_blank" style="text-decoration:none;" class="badge-rank">
-                    <i class="fa-brands fa-kaggle"></i> Kaggle
-                  </a>
-                  <a href="https://dzgreeno.github.io/Dairy_Digital_Twin/" target="_blank" style="text-decoration:none; background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;" class="badge-rank">
-                    <i class="fa-solid fa-globe"></i> Site Web
-                  </a>
-                  <a href="https://github.com/dzgreeno/Dairy_Digital_Twin" target="_blank" style="text-decoration:none; background:#f1f5f9; color:#0f172a;" class="badge-rank">
-                    <i class="fa-brands fa-github"></i> GitHub
-                  </a>
-                </div>
-              </div>
-              <div class="project-card-desc">
-                Jumeau numérique industriel bout-en-bout modélisant la collecte du lait cru, l'intégrité de la chaîne de froid et la microbiologie prédictive (modèle de Ratkowsky) en milieu saharien aride (cas Baladna Adrar). Évaluation de 5 scénarios What-If sur 700 000 L de flux : réduction de <strong>63% des pertes globales</strong> par ordonnancement dynamique des citernes et alertes IoT.
-              </div>
-              <div style="font-size: 11px; color: #64748b; margin-top: 5px;">
-                <i class="fa-brands fa-kaggle" style="color: #0284c7;"></i> Validé sur Kaggle (avec participation active à plusieurs défis algorithmiques et benchmarks dont Kaggle ARC-AGI-3).
-              </div>
-              <div class="tags" style="margin-top: 6px;">
-                <span class="tag">SimPy (DES)</span>
-                <span class="tag">Chaîne de Froid (&le;4&deg;C)</span>
-                <span class="tag">Cinétique Bactérienne</span>
-                <span class="tag">Monte-Carlo (CRN)</span>
-                <span class="tag">Python</span>
-              </div>
-            </div>
-
-            <!-- MassarEdu Web & Desktop -->
-            <div class="project-card">
-              <div class="project-card-header">
-                <div class="project-card-title">
-                  <i class="fa-solid fa-laptop-code" style="color: #0284c7;"></i>
-                  <span>MassarEdu 3.0 – Écosystème Web & Desktop</span>
-                </div>
-                <a href="https://massaredu.web.app/" target="_blank" style="text-decoration:none;" class="badge-rank">
-                  <i class="fa-solid fa-globe"></i> massaredu.web.app
-                </a>
-              </div>
-              <div class="project-card-desc">
-                Suite logicielle en production : Web App réactive et application Desktop d'administration (Electron, auto-updates et bases de données).
-              </div>
-              <div class="tags">
-                <span class="tag">Web App</span>
-                <span class="tag">Desktop (Electron)</span>
-                <span class="tag">PostgreSQL / SQLite</span>
-              </div>
-            </div>
-
-            <!-- Colossus-Lab (GitHub Research) -->
-            <div class="project-card">
-              <div class="project-card-header">
-                <div class="project-card-title">
-                  <i class="fa-brands fa-github" style="color: #0f172a;"></i>
-                  <span>Colossus-Lab – Recherche Systèmes & Inférence IA</span>
-                </div>
-                <span class="badge-rank" style="background:#f1f5f9; color:#334155;">GitHub Public</span>
-              </div>
-              <div class="project-card-desc">
-                Recherche expérimentale et optimisation de l'inférence des modèles Mixture-of-Experts (MoE) sous contraintes matérielles strictes.
-              </div>
-              <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">MoE Inference</span>
-                <span class="tag">Optimisation Mémoire</span>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-      </main>
-
-      <!-- RIGHT COLUMN: SKILLS, EDUCATION & MEDIA -->
-      <aside class="sidebar">
-
-        <!-- FORMATION ACADÉMIQUE -->
-        <section>
-          <h2 class="section-title">
-            <i class="fa-solid fa-graduation-cap"></i>
-            <span>Formation</span>
-          </h2>
-
-          <div class="education-item">
-            <div class="edu-degree">Master & Diplôme d'Ingénieur d'État en Génie Industriel & Logistique</div>
-            <div class="edu-school">École Supérieure en Sciences Appliquées (ESSA), Tlemcen</div>
-            <div class="edu-year">2017 – 2022</div>
-            <div class="edu-honors"><i class="fa-solid fa-award"></i> Mémoire soutenu avec Félicitations (19/20)</div>
-          </div>
-
-          <div class="education-item" style="margin-top: 12px;">
-            <div class="edu-degree">Classes Préparatoires en Sciences & Technologies</div>
-            <div class="edu-school">EPST / ESSA Tlemcen</div>
-            <div class="edu-year">2017 – 2019</div>
-          </div>
-        </section>
-
-        <!-- COMPÉTENCES MÉTIER (SUPPLY CHAIN) -->
-        <section>
-          <h2 class="section-title">
-            <i class="fa-solid fa-boxes-stacked"></i>
-            <span>Supply Chain & Terrain</span>
-          </h2>
-          <div class="skill-pill-container">
-            <span class="skill-pill">Gestion des Stocks & WMS</span>
-            <span class="skill-pill">Ordonnancement des Flux</span>
-            <span class="skill-pill">Chaîne de Froid & Traçabilité</span>
-            <span class="skill-pill">Gestion de Flotte & Rotations</span>
-            <span class="skill-pill">Approvisionnement & Achats</span>
-            <span class="skill-pill">Contrôle Qualité Réception</span>
-            <span class="skill-pill">Gestion des Entrepôts (5S)</span>
-            <span class="skill-pill">Planification PIC / PDP</span>
-          </div>
-        </section>
-
-        <!-- OUTILS INFORMATIQUES & IA -->
-        <section>
-          <h2 class="section-title">
-            <i class="fa-solid fa-laptop-code"></i>
-            <span>Outils & Digitalisation</span>
-          </h2>
-          <div class="skill-pill-container">
-            <span class="skill-pill special">ERP Odoo</span>
-            <span class="skill-pill special">Excel Avancé (VBA / TCD)</span>
-            <span class="skill-pill special">PostgreSQL / MySQL</span>
-            <span class="skill-pill tech">Python (Pandas, SciPy)</span>
-            <span class="skill-pill tech">Agentic AI & LLMs</span>
-            <span class="skill-pill tech">Node.js / Web Tools</span>
-            <span class="skill-pill">Git / GitHub CI</span>
-          </div>
-        </section>
-
-        <!-- PRODUCTION AUDIOVISUELLE & PROJETS DIGITAUX (INSIGHTPROD) -->
-        <section>
-          <h2 class="section-title">
-            <i class="fa-solid fa-video"></i>
-            <span>Média & Réalisations Numériques</span>
-          </h2>
-          <div class="audiovisual-box">
-            <h4><i class="fa-solid fa-clapperboard"></i> Production Télévisuelle & Audiovisuelle</h4>
-            <div style="font-size: 12px; font-weight: 700; color: var(--primary-light); margin-bottom: 4px;">
-              INSIGHTPROD / Télévision Algérienne (EPTV)
-            </div>
-            <p>
-              Montage et post-production d'œuvres télévisuelles nationales (notamment <em>« صون المقدس »</em> et <em>« أكول وشبعان »</em>).
-            </p>
-            <p style="margin-top: 6px; font-weight: 600; color: var(--primary);">
-              Atout clé pour la communication interne, les fiches visuelles d'exploitation et les modules de formation HSE.
-            </p>
-          </div>
-
-          <!-- Application Mobile Google Play -->
-          <div class="audiovisual-box" style="margin-top: 10px; border-left: 3px solid #16a34a;">
-            <h4><i class="fa-brands fa-google-play" style="color: #059669;"></i> Application Mobile Publiée (2023)</h4>
-            <div style="font-size: 12px; font-weight: 700; color: var(--dark);">
-              English 4 Primary Algeria
-            </div>
-            <p style="font-size: 11.5px; color: #475569; margin-top: 2px;">
-              Conception et déploiement d'une application éducative interactive sur le Google Play Store pour l'apprentissage de l'anglais en Algérie (InsightCenter).
-            </p>
-            <a href="https://play.google.com/store/apps/details?id=com.InsightCenter.English4Primary" target="_blank" style="display:inline-flex; align-items:center; gap:5px; font-size:11px; font-weight:700; color:#059669; margin-top:4px; text-decoration:none;">
-              <span>Voir sur Google Play</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          <p class="header-bio">
+            Ingénieur d'État en Génie Industriel et Logistique (ESSA Tlemcen), alliant expertise opérationnelle en gestion des entrepôts (WMS/ERP), modélisation des flux de transport et optimisation par l'Intelligence Artificielle. Rigoureux et orienté terrain, capable de coordonner les flux d'approvisionnement en matières premières, la chaîne de froid et le déploiement d'outils numériques pour sécuriser les cadences industrielles.
+          </p>
+          <div class="contact-grid">
+            <span class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Djelfa, Algérie (Mobilité totale : Adrar / Sud)</span>
+            </span>
+            <a href="tel:+213656197938" class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>+213 656 19 79 38</span>
+            </a>
+            <a href="mailto:lakhdarhitbi17@gmail.com" class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>lakhdarhitbi17@gmail.com</span>
+            </a>
+            <a href="https://github.com/dzgreeno" target="_blank" class="contact-item">
+              <i class="fa-brands fa-github"></i>
+              <span>github.com/dzgreeno</span>
+            </a>
+            <a href="https://www.kaggle.com/greenalgeria" target="_blank" class="contact-item">
+              <i class="fa-brands fa-kaggle"></i>
+              <span>kaggle.com/greenalgeria</span>
             </a>
           </div>
-        </section>
+        </div>
 
-        <!-- LANGUES -->
-        <section>
-          <h2 class="section-title">
-            <i class="fa-solid fa-language"></i>
-            <span>Langues</span>
-          </h2>
-          <div style="font-size: 13px; display:flex; flex-direction:column; gap:6px;">
-            <div style="display:flex; justify-content:space-between;">
-              <strong>Arabe :</strong> <span>Langue maternelle</span>
+        <!-- QR Code Section -->
+        <div class="qr-card">
+          <img src="qrcode.png" alt="QR Code Portfolio Lakhdar Taibaoui">
+          <span>Portfolio Digital</span>
+          <small>Scanner pour voir les projets & vidéos</small>
+        </div>
+      </header>
+
+      <!-- PAGE 1 BODY -->
+      <div class="cv-body">
+
+        <!-- LEFT COLUMN: EXPERIENCES PROFESSIONNELLES -->
+        <main class="main-column">
+          <section>
+            <h2 class="section-title">
+              <i class="fa-solid fa-briefcase"></i>
+              <span>Expériences Professionnelles & Stages Opérationnels</span>
+            </h2>
+
+            <div class="timeline">
+
+              <!-- Expérience 1: Freelance -->
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <span class="role-title">Freelance – Solutions Logicielles & Audiovisuel IA Générative</span>
+                  <span class="period">2023 - Présent</span>
+                </div>
+                <div class="company-badge">Indépendant | Projets Numériques, Web/Mobile & Création Vidéo IA</div>
+                <div class="timeline-desc">
+                  <ul>
+                    <li>Développement d'applications Web et mobiles de production (Firebase, Node.js, Electron, React Native).</li>
+                    <li>Création de contenus audiovisuels avancés : animation, montage et vidéo par <strong>IA Générative</strong> (modèles visuels, storytelling dynamique et post-production numérique).</li>
+                    <li>Développement continu du <strong>Jumeau Numérique (Digital Twin Agro-Logistique)</strong> pour la simulation des flux agricoles et d'élevage.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Expérience 2: Magic Mall -->
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <span class="role-title">Superviseur d'Approvisionnement & Gestionnaire de Stocks</span>
+                  <span class="period">2022</span>
+                </div>
+                <div class="company-badge">Magic Mall, Djelfa</div>
+                <div class="timeline-desc">
+                  <ul>
+                    <li>Gestion physique et informatique de plus de 4 500 références sous logiciel ERP dédié.</li>
+                    <li>Organisation des zones de stockage, optimisation du picking et réduction des ruptures de stock de <strong>25%</strong>.</li>
+                    <li>Encadrement d'une équipe de magasiniers et contrôle de conformité à réception.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Expérience 3: Calbin -->
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <span class="role-title">Stagiaire – Gestion des Stocks & Chaîne Logistique</span>
+                  <span class="period">2021 - 2022</span>
+                </div>
+                <div class="company-badge">Calbin, Alger</div>
+                <div class="timeline-desc">
+                  <ul>
+                    <li>Analyse des rotations de stock (méthodes ABC/Pareto) et optimisation du réapprovisionnement.</li>
+                    <li>Audit des flux internes de manutention et formalisation des fiches de procédures standardisées.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Expérience 4: Laiterie Maghnia -->
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <span class="role-title">Stage Pratique – Lignes de Production & Flux Laitiers (Lait, Fromage & Yaourt)</span>
+                  <span class="period">2019</span>
+                </div>
+                <div class="company-badge">Laiterie Maghnia (Tlemcen) – Complexe Produits Laitiers & Dérivés</div>
+                <div class="timeline-desc">
+                  <ul>
+                    <li>Immersion opérationnelle sur les chaînes de fabrication : lait pasteurisé, yaourts et fromages.</li>
+                    <li>Suivi des réceptions de lait cru, vérification des paramètres physico-chimiques et respect de la chaîne de froid.</li>
+                    <li>Gestion des flux d'emballage, des stocks tampons de matières premières et ordonnancement des déchargements en citernes.</li>
+                  </ul>
+                </div>
+              </div>
+
             </div>
-            <div style="display:flex; justify-content:space-between;">
-              <strong>Français :</strong> <span>Courant (Technique & Professionnel)</span>
+          </section>
+        </main>
+
+        <!-- RIGHT COLUMN: FORMATION & COMPETENCES -->
+        <aside class="sidebar">
+
+          <!-- FORMATION ACADÉMIQUE -->
+          <section>
+            <h2 class="section-title">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span>Formation</span>
+            </h2>
+
+            <div class="education-item">
+              <div class="edu-degree">Master & Diplôme d'Ingénieur d'État en Génie Industriel & Logistique</div>
+              <div class="edu-school">École Supérieure en Sciences Appliquées (ESSA), Tlemcen</div>
+              <div class="edu-year">2017 – 2022</div>
+              <div class="edu-honors"><i class="fa-solid fa-award"></i> Mémoire soutenu avec Félicitations (19/20)</div>
             </div>
-            <div style="display:flex; justify-content:space-between;">
-              <strong>Anglais :</strong> <span>Avancé (Documentation & Technique)</span>
+
+            <div class="education-item" style="margin-top: 12px;">
+              <div class="edu-degree">Classes Préparatoires en Sciences & Technologies</div>
+              <div class="edu-school">EPST / ESSA Tlemcen</div>
+              <div class="edu-year">2017 – 2019</div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- RÉFÉRENCES ACADÉMIQUES -->
-        <section>
-          <h2 class="section-title">
-            <i class="fa-solid fa-user-check"></i>
-            <span>Références</span>
-          </h2>
-          <div style="font-size: 12px; color: #475569; line-height: 1.4;">
-            <p><strong>Prof. Dr. Zaki Sari</strong><br>Directeur de Recherche, ESSA Tlemcen<br><em>zaki_sari@yahoo.com</em></p>
-            <p style="margin-top: 8px;"><strong>Prof. Dr. Mohammed Bennekrouf</strong><br>Enseignant-Chercheur, ESSA Tlemcen<br><em>mbenokrouf@gmail.com</em></p>
-          </div>
-        </section>
+          <!-- COMPÉTENCES MÉTIER (SUPPLY CHAIN) -->
+          <section>
+            <h2 class="section-title">
+              <i class="fa-solid fa-boxes-stacked"></i>
+              <span>Supply Chain & Terrain</span>
+            </h2>
+            <div class="skill-pill-container">
+              <span class="skill-pill">Gestion des Stocks & WMS</span>
+              <span class="skill-pill">Ordonnancement des Flux</span>
+              <span class="skill-pill">Chaîne de Froid & Traçabilité</span>
+              <span class="skill-pill">Gestion de Flotte & Rotations</span>
+              <span class="skill-pill">Approvisionnement & Achats</span>
+              <span class="skill-pill">Contrôle Qualité Réception</span>
+              <span class="skill-pill">Gestion des Entrepôts (5S)</span>
+              <span class="skill-pill">Planification PIC / PDP</span>
+            </div>
+          </section>
 
-      </aside>
+          <!-- OUTILS INFORMATIQUES & IA -->
+          <section>
+            <h2 class="section-title">
+              <i class="fa-solid fa-laptop-code"></i>
+              <span>Outils & Digitalisation</span>
+            </h2>
+            <div class="skill-pill-container">
+              <span class="skill-pill special">ERP Odoo</span>
+              <span class="skill-pill special">Excel Avancé (VBA / TCD)</span>
+              <span class="skill-pill special">PostgreSQL / MySQL</span>
+              <span class="skill-pill tech">Python (Pandas, SciPy)</span>
+              <span class="skill-pill tech">Agentic AI & LLMs</span>
+              <span class="skill-pill tech">Node.js / Web Tools</span>
+              <span class="skill-pill">Git / GitHub CI</span>
+            </div>
+          </section>
 
+        </aside>
+
+      </div>
+    </div>
+
+    <!-- ================= PAGE 2 ================= -->
+    <div class="cv-page cv-page-2">
+
+      <!-- PAGE 2 TOP HEADER -->
+      <div class="page2-header">
+        <div class="p2-title">
+          <i class="fa-solid fa-user-check" style="color: #6ee7b7;"></i>
+          <span>LAKHDAR TAIBAOUI &nbsp;·&nbsp; Dossier Technique, Média &amp; Références</span>
+        </div>
+        <div class="p2-sub">
+          <span>Curriculum Vitae (Page 2 / 2)</span>
+        </div>
+      </div>
+
+      <!-- PAGE 2 BODY -->
+      <div class="cv-body p2-body">
+
+        <!-- LEFT COLUMN: PROJETS MAJEURS -->
+        <main class="main-column">
+          <section>
+            <h2 class="section-title">
+              <i class="fa-solid fa-microchip"></i>
+              <span>Projets Majeurs, Compétitions & IA Appliquée</span>
+            </h2>
+
+            <div class="project-grid">
+
+              <!-- Dairy Supply-Chain Digital Twin (Flagship Project) -->
+              <div class="project-card">
+                <div class="project-card-header">
+                  <div class="project-card-title">
+                    <i class="fa-solid fa-cow" style="color: #059669;"></i>
+                    <span>Dairy Supply-Chain Digital Twin (SimPy &amp; Biophysique)</span>
+                  </div>
+                  <div style="display:flex; gap:6px; align-items:center;">
+                    <a href="https://www.kaggle.com/code/greenalgeria/dairy-supply-chain-digital-twin-final" target="_blank" style="text-decoration:none;" class="badge-rank">
+                      <i class="fa-brands fa-kaggle"></i> Kaggle
+                    </a>
+                    <a href="https://dzgreeno.github.io/Dairy_Digital_Twin/" target="_blank" style="text-decoration:none; background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;" class="badge-rank">
+                      <i class="fa-solid fa-globe"></i> Site Web
+                    </a>
+                    <a href="https://github.com/dzgreeno/Dairy_Digital_Twin" target="_blank" style="text-decoration:none; background:#f1f5f9; color:#0f172a;" class="badge-rank">
+                      <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                  </div>
+                </div>
+                <div class="project-card-desc">
+                  Jumeau numérique industriel bout-en-bout modélisant la collecte du lait cru, l'intégrité de la chaîne de froid et la microbiologie prédictive (modèle de Ratkowsky) en milieu saharien aride (cas Baladna Adrar). Évaluation de 5 scénarios What-If sur 700 000 L de flux : réduction de <strong>63% des pertes globales</strong> par ordonnancement dynamique des citernes et alertes IoT.
+                </div>
+                <div style="font-size: 11px; color: #64748b; margin-top: 5px;">
+                  <i class="fa-brands fa-kaggle" style="color: #0284c7;"></i> Validé sur Kaggle (avec participation active à plusieurs défis algorithmiques et benchmarks dont Kaggle ARC-AGI-3).
+                </div>
+                <div class="tags" style="margin-top: 6px;">
+                  <span class="tag">SimPy (DES)</span>
+                  <span class="tag">Chaîne de Froid (&le;4&deg;C)</span>
+                  <span class="tag">Cinétique Bactérienne</span>
+                  <span class="tag">Monte-Carlo (CRN)</span>
+                  <span class="tag">Python</span>
+                </div>
+              </div>
+
+              <!-- MassarEdu Web & Desktop -->
+              <div class="project-card">
+                <div class="project-card-header">
+                  <div class="project-card-title">
+                    <i class="fa-solid fa-laptop-code" style="color: #0284c7;"></i>
+                    <span>MassarEdu 3.0 – Écosystème Web & Desktop</span>
+                  </div>
+                  <a href="https://massaredu.web.app/" target="_blank" style="text-decoration:none;" class="badge-rank">
+                    <i class="fa-solid fa-globe"></i> massaredu.web.app
+                  </a>
+                </div>
+                <div class="project-card-desc">
+                  Suite logicielle en production : Web App réactive et application Desktop d'administration (Electron, auto-updates et bases de données).
+                </div>
+                <div class="tags">
+                  <span class="tag">Web App</span>
+                  <span class="tag">Desktop (Electron)</span>
+                  <span class="tag">PostgreSQL / SQLite</span>
+                </div>
+              </div>
+
+              <!-- Colossus-Lab (GitHub Research) -->
+              <div class="project-card">
+                <div class="project-card-header">
+                  <div class="project-card-title">
+                    <i class="fa-brands fa-github" style="color: #0f172a;"></i>
+                    <span>Colossus-Lab – Recherche Systèmes & Inférence IA</span>
+                  </div>
+                  <span class="badge-rank" style="background:#f1f5f9; color:#334155;">GitHub Public</span>
+                </div>
+                <div class="project-card-desc">
+                  Recherche expérimentale et optimisation de l'inférence des modèles Mixture-of-Experts (MoE) sous contraintes matérielles strictes.
+                </div>
+                <div class="tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">MoE Inference</span>
+                  <span class="tag">Optimisation Mémoire</span>
+                </div>
+              </div>
+
+            </div>
+          </section>
+        </main>
+
+        <!-- RIGHT COLUMN: MEDIA, LANGUES, REFERENCES -->
+        <aside class="sidebar">
+
+          <!-- PRODUCTION AUDIOVISUELLE & PROJETS DIGITAUX (INSIGHTPROD) -->
+          <section>
+            <h2 class="section-title">
+              <i class="fa-solid fa-video"></i>
+              <span>Média & Réalisations Numériques</span>
+            </h2>
+            <div class="audiovisual-box">
+              <h4><i class="fa-solid fa-clapperboard"></i> Production Télévisuelle & Audiovisuelle</h4>
+              <div style="font-size: 12px; font-weight: 700; color: var(--primary-light); margin-bottom: 4px;">
+                INSIGHTPROD / Télévision Algérienne (EPTV)
+              </div>
+              <p>
+                Montage et post-production d'œuvres télévisuelles nationales (notamment <em>« صون المقدس »</em> et <em>« أكول وشبعان »</em>).
+              </p>
+              <p style="margin-top: 6px; font-weight: 600; color: var(--primary);">
+                Atout clé pour la communication interne, les fiches visuelles d'exploitation et les modules de formation HSE.
+              </p>
+            </div>
+
+            <!-- Application Mobile Google Play -->
+            <div class="audiovisual-box" style="margin-top: 10px; border-left: 3px solid #16a34a;">
+              <h4><i class="fa-brands fa-google-play" style="color: #059669;"></i> Application Mobile Publiée (2023)</h4>
+              <div style="font-size: 12px; font-weight: 700; color: var(--dark);">
+                English 4 Primary Algeria
+              </div>
+              <p style="font-size: 11.5px; color: #475569; margin-top: 2px;">
+                Conception et déploiement d'une application éducative interactive sur le Google Play Store pour l'apprentissage de l'anglais en Algérie (InsightCenter).
+              </p>
+              <a href="https://play.google.com/store/apps/details?id=com.InsightCenter.English4Primary" target="_blank" style="display:inline-flex; align-items:center; gap:5px; font-size:11px; font-weight:700; color:#059669; margin-top:4px; text-decoration:none;">
+                <span>Voir sur Google Play</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </section>
+
+          <!-- LANGUES -->
+          <section>
+            <h2 class="section-title">
+              <i class="fa-solid fa-language"></i>
+              <span>Langues</span>
+            </h2>
+            <div style="font-size: 13px; display:flex; flex-direction:column; gap:6px;">
+              <div style="display:flex; justify-content:space-between;">
+                <strong>Arabe :</strong> <span>Langue maternelle</span>
+              </div>
+              <div style="display:flex; justify-content:space-between;">
+                <strong>Français :</strong> <span>Courant (Technique & Professionnel)</span>
+              </div>
+              <div style="display:flex; justify-content:space-between;">
+                <strong>Anglais :</strong> <span>Avancé (Documentation & Technique)</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- RÉFÉRENCES ACADÉMIQUES -->
+          <section>
+            <h2 class="section-title">
+              <i class="fa-solid fa-user-check"></i>
+              <span>Références</span>
+            </h2>
+            <div style="font-size: 12px; color: #475569; line-height: 1.4;">
+              <p><strong>Prof. Dr. Zaki Sari</strong><br>Directeur de Recherche, ESSA Tlemcen<br><em>zaki_sari@yahoo.com</em></p>
+              <p style="margin-top: 8px;"><strong>Prof. Dr. Mohammed Bennekrouf</strong><br>Enseignant-Chercheur, ESSA Tlemcen<br><em>mbenokrouf@gmail.com</em></p>
+            </div>
+          </section>
+
+        </aside>
+
+      </div>
     </div>
 
   </div>
