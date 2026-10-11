@@ -297,14 +297,16 @@
     .timeline-header {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
+      align-items: center;
+      gap: 10px;
       margin-bottom: 2px;
     }
 
     .role-title {
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 700;
       color: var(--dark);
+      line-height: 1.35;
     }
 
     .company-badge {
@@ -315,11 +317,14 @@
 
     .period {
       font-size: 11px;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--muted);
       background: #f1f5f9;
-      padding: 1px 6px;
+      padding: 2px 7px;
       border-radius: 4px;
+      white-space: nowrap !important;
+      flex-shrink: 0 !important;
+      letter-spacing: 0.2px;
     }
 
     .timeline-desc {
@@ -363,27 +368,46 @@
     .project-card-header {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
+      gap: 10px;
       margin-bottom: 6px;
     }
 
     .project-card-title {
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 700;
       color: var(--dark);
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
+      line-height: 1.3;
+    }
+
+    .project-badges {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+      white-space: nowrap;
     }
 
     .badge-rank {
-      background: #fef3c7;
-      color: #92400e;
-      font-size: 11px;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 12px;
-      border: 1px solid #fde68a;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 5px !important;
+      font-size: 10.5px !important;
+      font-weight: 700 !important;
+      padding: 2.5px 8px !important;
+      border-radius: 6px !important;
+      white-space: nowrap !important;
+      flex-shrink: 0 !important;
+      line-height: 1 !important;
+      text-decoration: none !important;
+    }
+
+    .badge-rank i {
+      font-size: 10.5px !important;
+      line-height: 1 !important;
     }
 
     .project-card-desc {
@@ -406,6 +430,43 @@
       padding: 1px 7px;
       border-radius: 4px;
       font-weight: 500;
+    }
+
+    /* LANGUAGES COMPONENT */
+    .lang-card {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      background: var(--light-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 9px 12px;
+    }
+
+    .lang-item {
+      display: grid;
+      grid-template-columns: 62px 10px 1fr;
+      align-items: center;
+      font-size: 11.5px;
+      line-height: 1.35;
+    }
+
+    .lang-name {
+      font-weight: 700;
+      color: var(--dark);
+      white-space: nowrap;
+    }
+
+    .lang-sep {
+      font-weight: 700;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .lang-desc {
+      color: #475569;
+      font-size: 11px;
+      white-space: nowrap;
     }
 
     /* SIDEBAR (RIGHT COLUMN) */
@@ -515,6 +576,30 @@
       line-height: 1.4;
     }
 
+    /* WEB SCREEN CONTINUOUS VIEW */
+    @media screen {
+      .page2-header {
+        display: none !important;
+      }
+      .cv-container {
+        background: var(--white);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        overflow: hidden;
+        margin: 24px auto 40px auto;
+      }
+      .cv-page {
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        margin-bottom: 0 !important;
+        min-height: auto !important;
+        height: auto !important;
+      }
+      .cv-page-2 {
+        border-top: 2px dashed #e2e8f0;
+      }
+    }
+
     /* PRINT STYLES FOR PDF */
     @page {
       size: A4 portrait;
@@ -562,6 +647,17 @@
         page-break-after: auto !important;
         break-after: auto !important;
       }
+      .page2-header {
+        display: flex !important;
+      }
+      .cv-page-2 {
+        border-top: none !important;
+      }
+      .cv-header, .page2-header, .tag, .skill-pill, .badge-rank, .audiovisual-box, .project-card, .company-badge, .period {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
       .cv-header, .page2-header, .tag, .skill-pill, .badge-rank, .audiovisual-box, .project-card, .company-badge, .period {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
@@ -654,7 +750,7 @@
               <div class="timeline-item">
                 <div class="timeline-header">
                   <span class="role-title">Freelance – Solutions Logicielles & Audiovisuel IA Générative</span>
-                  <span class="period">2023 - Présent</span>
+                  <span class="period">2023 – Présent</span>
                 </div>
                 <div class="company-badge">Indépendant | Projets Numériques, Web/Mobile & Création Vidéo IA</div>
                 <div class="timeline-desc">
@@ -815,14 +911,14 @@
                     <i class="fa-solid fa-cow" style="color: #059669;"></i>
                     <span>Dairy Supply-Chain Digital Twin (SimPy &amp; Biophysique)</span>
                   </div>
-                  <div style="display:flex; gap:6px; align-items:center;">
-                    <a href="https://www.kaggle.com/code/greenalgeria/dairy-supply-chain-digital-twin-final" target="_blank" style="text-decoration:none;" class="badge-rank">
+                  <div class="project-badges">
+                    <a href="https://www.kaggle.com/code/greenalgeria/dairy-supply-chain-digital-twin-final" target="_blank" class="badge-rank" style="background:#fef3c7; color:#92400e; border:1px solid #fde68a;">
                       <i class="fa-brands fa-kaggle"></i> Kaggle
                     </a>
-                    <a href="https://dzgreeno.github.io/Dairy_Digital_Twin/" target="_blank" style="text-decoration:none; background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;" class="badge-rank">
+                    <a href="https://dzgreeno.github.io/Dairy_Digital_Twin/" target="_blank" class="badge-rank" style="background:#ecfdf5; color:#047857; border:1px solid #a7f3d0;">
                       <i class="fa-solid fa-globe"></i> Site Web
                     </a>
-                    <a href="https://github.com/dzgreeno/Dairy_Digital_Twin" target="_blank" style="text-decoration:none; background:#f1f5f9; color:#0f172a;" class="badge-rank">
+                    <a href="https://github.com/dzgreeno/Dairy_Digital_Twin" target="_blank" class="badge-rank" style="background:#f1f5f9; color:#0f172a; border:1px solid #cbd5e1;">
                       <i class="fa-brands fa-github"></i> GitHub
                     </a>
                   </div>
@@ -847,11 +943,13 @@
                 <div class="project-card-header">
                   <div class="project-card-title">
                     <i class="fa-solid fa-laptop-code" style="color: #0284c7;"></i>
-                    <span>MassarEdu 3.0 – Écosystème Web & Desktop</span>
+                    <span>MassarEdu 3.0 – Écosystème Web &amp; Desktop</span>
                   </div>
-                  <a href="https://massaredu.web.app/" target="_blank" style="text-decoration:none;" class="badge-rank">
-                    <i class="fa-solid fa-globe"></i> massaredu.web.app
-                  </a>
+                  <div class="project-badges">
+                    <a href="https://massaredu.web.app/" target="_blank" class="badge-rank" style="background:#fef3c7; color:#92400e; border:1px solid #fde68a;">
+                      <i class="fa-solid fa-globe"></i> massaredu.web.app
+                    </a>
+                  </div>
                 </div>
                 <div class="project-card-desc">
                   Suite logicielle en production : Web App réactive et application Desktop d'administration (Electron, auto-updates et bases de données).
@@ -868,9 +966,13 @@
                 <div class="project-card-header">
                   <div class="project-card-title">
                     <i class="fa-brands fa-github" style="color: #0f172a;"></i>
-                    <span>Colossus-Lab – Recherche Systèmes & Inférence IA</span>
+                    <span>Colossus-Lab – Recherche Systèmes &amp; Inférence IA</span>
                   </div>
-                  <span class="badge-rank" style="background:#f1f5f9; color:#334155;">GitHub Public</span>
+                  <div class="project-badges">
+                    <span class="badge-rank" style="background:#f1f5f9; color:#334155; border:1px solid #cbd5e1;">
+                      <i class="fa-brands fa-github"></i> GitHub Public
+                    </span>
+                  </div>
                 </div>
                 <div class="project-card-desc">
                   Recherche expérimentale et optimisation de l'inférence des modèles Mixture-of-Experts (MoE) sous contraintes matérielles strictes.
@@ -929,15 +1031,21 @@
               <i class="fa-solid fa-language"></i>
               <span>Langues</span>
             </h2>
-            <div style="font-size: 13px; display:flex; flex-direction:column; gap:6px;">
-              <div style="display:flex; justify-content:space-between;">
-                <strong>Arabe :</strong> <span>Langue maternelle</span>
+            <div class="lang-card">
+              <div class="lang-item">
+                <span class="lang-name">Arabe</span>
+                <span class="lang-sep">:</span>
+                <span class="lang-desc">Langue maternelle</span>
               </div>
-              <div style="display:flex; justify-content:space-between;">
-                <strong>Français :</strong> <span>Courant (Technique & Professionnel)</span>
+              <div class="lang-item">
+                <span class="lang-name">Français</span>
+                <span class="lang-sep">:</span>
+                <span class="lang-desc">Courant (Technique &amp; Pro)</span>
               </div>
-              <div style="display:flex; justify-content:space-between;">
-                <strong>Anglais :</strong> <span>Avancé (Documentation & Technique)</span>
+              <div class="lang-item">
+                <span class="lang-name">Anglais</span>
+                <span class="lang-sep">:</span>
+                <span class="lang-desc">Avancé (Documentation &amp; Tech)</span>
               </div>
             </div>
           </section>
