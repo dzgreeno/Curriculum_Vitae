@@ -665,9 +665,119 @@
         print-color-adjust: exact !important;
       }
     }
-      .cv-header, .page2-header, .tag, .skill-pill, .badge-rank, .audiovisual-box, .project-card, .company-badge, .period {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
+
+    /* ========================================================
+       RESPONSIVE DESIGN FOR SMARTPHONES & TABLETS (SCREEN ONLY)
+       ======================================================== */
+    @media screen and (max-width: 900px) {
+      .cv-container {
+        margin: 12px auto;
+        padding: 0;
+        border-radius: 8px;
+        max-width: 95%;
+      }
+      .action-bar {
+        margin: 10px auto;
+        max-width: 95%;
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+      .action-bar .brand {
+        justify-content: center;
+      }
+      .action-bar > div:last-child {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+      }
+      .btn-action {
+        justify-content: center;
+        width: 100%;
+      }
+      .cv-header {
+        grid-template-columns: 1fr;
+        padding: 24px 20px;
+        gap: 20px;
+        text-align: left;
+      }
+      .qr-card {
+        display: none; /* Hidden on mobile screen since user is already on a mobile device */
+      }
+      .cv-body, .p2-body {
+        grid-template-columns: 1fr !important;
+        gap: 24px;
+        padding: 18px 20px 14px 20px !important;
+      }
+      .header-text h1 {
+        font-size: 24px;
+      }
+      .target-title {
+        font-size: 13px;
+        line-height: 1.4;
+      }
+      .header-bio {
+        font-size: 12.5px;
+      }
+      .contact-grid {
+        gap: 8px 14px;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      body {
+        background-color: #f8fafc;
+      }
+      .cv-container {
+        margin: 0;
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      .action-bar {
+        margin: 0;
+        max-width: 100%;
+        border-radius: 0;
+        border-bottom: 1px solid #e2e8f0;
+        padding: 12px 16px;
+      }
+      .cv-header {
+        padding: 20px 16px;
+      }
+      .header-text h1 {
+        font-size: 22px;
+      }
+      .target-title {
+        font-size: 12px;
+        padding: 4px 10px;
+      }
+      .contact-grid {
+        flex-direction: column;
+        gap: 6px;
+      }
+      .cv-body, .p2-body {
+        padding: 14px 14px !important;
+      }
+      .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+      .period {
+        align-self: flex-start;
+      }
+      .project-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+      .project-badges {
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      .badge-rank {
+        font-size: 10px !important;
       }
     }
   </style>

@@ -436,15 +436,87 @@
       text-decoration: none;
     }
 
+    /* ========================================================
+       RESPONSIVE DESIGN FOR SMARTPHONES & TABLETS
+       ======================================================== */
     @media (max-width: 900px) {
+      .navbar {
+        padding: 12px 16px;
+      }
+      .nav-container {
+        flex-direction: column;
+        gap: 14px;
+        align-items: center;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 16px;
+      }
+      .hero {
+        padding: 45px 16px 55px;
+      }
       .hero-container {
         grid-template-columns: 1fr;
+        gap: 32px;
       }
       .hero h1 {
-        font-size: 32px;
+        font-size: 28px;
+        line-height: 1.25;
+      }
+      .hero p {
+        font-size: 14.5px;
+        margin-bottom: 22px;
+      }
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      }
+      .btn-hero {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
       }
       .hero-stats {
         grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .section {
+        padding: 44px 16px;
+      }
+      .section-title-main {
+        font-size: 24px;
+      }
+      .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .card {
+        padding: 20px 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 17px;
+      }
+      .btn-nav-primary {
+        width: 100%;
+        justify-content: center;
+      }
+      .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 10px 12px;
+        font-size: 12.5px;
+      }
+      .hero-badge {
+        font-size: 11px;
+        padding: 4px 10px;
+      }
+      .hero-card {
+        padding: 18px 14px;
       }
     }
   </style>
